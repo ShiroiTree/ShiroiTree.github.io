@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>ShiroiTree&#39;s Personal Blog</title>
+  <title>关于本站 | ShiroiTree&#39;s Personal Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本站是@ShiroiTree的个人博客，目前还在装修中。。。">
+  <meta name="description" content="本站是@ShiroiTree的个人博客。 关于个人站的搭建目前来说，本站使用的是最流行的静态站配置模式，基于Hexo+Github托管的模式，并用域名提供商的DNS服务器进行解析。 Hexo的配置目前网络资源已经非常丰富，此处不再介绍，只单独讨论一下想要建站的新人需要注意的坑  注意文件存储目录，为避免出现不必要的问题，文件目录中不应出现汉字、特殊符号（# @ ！等）。 个人域名不是必备的，购买了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ShiroiTree&#39;s Personal Blog">
-<meta property="og:url" content="http://example.com/2023/10/14/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99/index.html">
+<meta property="og:title" content="关于本站">
+<meta property="og:url" content="http://example.com/2023/10/14/about-site/index.html">
 <meta property="og:site_name" content="ShiroiTree&#39;s Personal Blog">
-<meta property="og:description" content="本站是@ShiroiTree的个人博客，目前还在装修中。。。">
+<meta property="og:description" content="本站是@ShiroiTree的个人博客。 关于个人站的搭建目前来说，本站使用的是最流行的静态站配置模式，基于Hexo+Github托管的模式，并用域名提供商的DNS服务器进行解析。 Hexo的配置目前网络资源已经非常丰富，此处不再介绍，只单独讨论一下想要建站的新人需要注意的坑  注意文件存储目录，为避免出现不必要的问题，文件目录中不应出现汉字、特殊符号（# @ ！等）。 个人域名不是必备的，购买了">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-10-14T14:01:42.358Z">
-<meta property="article:modified_time" content="2023-10-14T14:02:34.549Z">
+<meta property="article:published_time" content="2023-10-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-14T15:40:46.714Z">
 <meta property="article:author" content="ShiroiTree">
+<meta property="article:tag" content="about">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="ShiroiTree&#39;s Personal Blog" type="application/atom+xml">
@@ -47,7 +48,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assest/imgs/icon.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
@@ -59,20 +60,16 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/tags/about">关于本站</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
             
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -80,8 +77,6 @@
 			<div class="social">
 				
 					<a class="github" target="_blank" href="https://github.com/ShiroiTree/" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="mail" target="_blank" href="/dammond_max@outlook.com" title="mail"><i class="icon-mail"></i></a>
 		        
 					<a class="twitter" target="_blank" href="#" title="twitter"><i class="icon-twitter"></i></a>
 		        
@@ -101,13 +96,15 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/assest/imgs/icon.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
+			
+				
 			
 				
 			
@@ -118,8 +115,6 @@
 					
 						<a class="github" target="_blank" href="https://github.com/ShiroiTree/" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="mail" target="_blank" href="/dammond_max@outlook.com" title="mail"><i class="icon-mail"></i></a>
-			        
 						<a class="twitter" target="_blank" href="#" title="twitter"><i class="icon-twitter"></i></a>
 			        
 				</div>
@@ -129,7 +124,9 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 100%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/tags/about">关于本站</a></li>
 		        
 				</ul>
 			</nav>
@@ -144,41 +141,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-关于本站" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-about-site" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于本站
+    </h1>
+  
+
+        
+        <a href="/2023/10/14/about-site/" class="archive-article-date">
+  	<time datetime="2023-10-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-10-14</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本站是@ShiroiTree的个人博客，目前还在装修中。。。</p>
+        <p>本站是@ShiroiTree的个人博客。</p>
+<h3 id="关于个人站的搭建"><a href="#关于个人站的搭建" class="headerlink" title="关于个人站的搭建"></a>关于个人站的搭建</h3><p>目前来说，本站使用的是最流行的静态站配置模式，基于Hexo+Github托管的模式，并用域名提供商的DNS服务器进行解析。</p>
+<p>Hexo的配置目前网络资源已经非常丰富，此处不再介绍，只单独讨论一下想要建站的新人需要注意的坑</p>
+<ol>
+<li>注意文件存储目录，为避免出现不必要的问题，文件目录中不应出现汉字、特殊符号（# @ ！等）。</li>
+<li>个人域名不是必备的，购买了个人域名之后，如果没有做好DNS服务器配置，访问速度和Github原始网站相仿。所以，如果不是钱多没处花，或者就是想要一个高逼格的域名，否则，购买一个个人域名是没有必要的。</li>
+<li>配置这样一个站点，可以说完全不复杂，但是代价是很多内容的显示就没有办法按照自己的想法来。如果说，想要整个页面的高度定制化，那HTLM和CSS的学习是必不可少的（拥有这样的一个网站作为练手对象，确实有学习价值）。总之，配置这样的网站，需要学习的东西可多可少，主要是看自己对于效果的追求。</li>
+<li>最后一点，问问自己，配置这样的一个个人站，是为了达成什么目的。当然，你也可以是因为觉得拥有一个个人站很有逼格，或者是觉得国内常规博客平台没有办法满足自己的需要，也可以是你想要发布一些不那么合规的东西，这都是你搭建一个个人站的理由。只是，你应该努力达成自己最初设定的那个目标。</li>
+</ol>
+<p>实际上，Hexo有很多不方便的地方，它作为一个静态博客的框架，从内容管理的角度是非常不方便的，没有后台系统，每次更新博客只能在本地生成文件之后，再挂载到Github上；不能防SQ，L所以基本上没有评论系统；目录系统糟糕，想要优秀的内容整理只有自己定制。</p>
+<p>但是，不论如何，再多的缺点也挡不住其简单易用占用低的特点，对于我这种初次配置网站的小白，可以说是量身定制的了。</p>
+<h3 id="本站会发布哪些内容"><a href="#本站会发布哪些内容" class="headerlink" title="本站会发布哪些内容"></a>本站会发布哪些内容</h3><p>目前计划的，本站将作为我未来学习+成功输出的一部分，我会发布包括但不限于：刷算法题的感想，部分学科的学习总结，目前正在Doing的项目。</p>
+<p>同时，如上文所述，本站将作为我学习HTML和CSS的一个媒介（真的不想做前端，就学这一点点），我将会在本站上跟进关于本站如何深度定制，以及相应的代码与思路。<br><del>（真的很讨厌写前端，这辈子都不可能写前端的，怎么可能是我自己定制的，都是抄来的罢了）</del></p>
+<h3 id="关于我自己"><a href="#关于我自己" class="headerlink" title="关于我自己"></a>关于我自己</h3><p>是某西北三航技校23届在读，好人都可以来找我加联系方式，希望和大家交朋友<del>，希望大佬们来带飞我</del>。</p>
+<p>正在准备ACM，学习算法中，所以未来一段时间，本站将会作为我挂载部分代码及刷题心得的地方。</p>
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
       
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
       
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">about</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -229,7 +250,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/10/14/%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/10/14/about-site/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -255,20 +276,23 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E4%B8%AA%E4%BA%BA%E7%AB%99%E7%9A%84%E6%90%AD%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">关于个人站的搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E7%AB%99%E4%BC%9A%E5%8F%91%E5%B8%83%E5%93%AA%E4%BA%9B%E5%86%85%E5%AE%B9"><span class="toc-number">2.</span> <span class="toc-text">本站会发布哪些内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91%E8%87%AA%E5%B7%B1"><span class="toc-number">3.</span> <span class="toc-text">关于我自己</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
 
-
-  
-  
-  
-
-  
-
-  
-
-  
 
 
           </div>
@@ -298,7 +322,7 @@
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
-		innerArchive: true,
+		innerArchive: false,
 		showTags: false
 	}
 </script>
@@ -315,15 +339,9 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      
-      
     
       
-      
-      
     
-      
-      
       
     
     
@@ -332,117 +350,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
-      
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
         
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
   </div>
   <div class="tools-wrap">
     
-    	<section class="tools-section tools-section-all" q-show="innerArchive">
-        <div class="search-wrap">
-          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
-          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
-          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
-        </div>
-        <div class="widget tagcloud search-tag">
-          <p class="search-tag-wording">tag:</p>
-          <label class="search-switch">
-            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
-          </label>
-          <ul class="article-tag-list" q-show="showTags">
-            
-            <div class="clearfix"></div>
-          </ul>
-        </div>
-        <ul class="search-ul">
-          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
-            3、在根目录_config.yml里添加配置：
-<pre style="font-size: 12px;" q-show="jsonFail">
-  jsonContent:
-    meta: false
-    pages: false
-    posts:
-      title: true
-      date: true
-      path: true
-      text: false
-      raw: false
-      content: false
-      slug: false
-      updated: false
-      comments: false
-      link: false
-      permalink: false
-      excerpt: false
-      categories: false
-      tags: true
-</pre>
-          </p>
-          <li class="search-li" q-repeat="items" q-show="isShow">
-            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
-            <p class="search-time">
-              <i class="icon-calendar icon"></i>
-              <span q-text="date|dateformat"></span>
-            </p>
-            <p class="search-tag">
-              <i class="icon-price-tags icon"></i>
-              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
-            </p>
-          </li>
-        </ul>
-    	</section>
-    
 
     
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
-    
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
-  	  	
-    	</section>
     
   </div>
   
