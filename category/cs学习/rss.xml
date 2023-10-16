@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Personal Blog • Posts by &#34;cs学习&#34; category</title>
+        <link>http://shiroitree.icu</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 15 Oct 2023 00:00:00 +0800</pubDate>
+        <lastBuildDate>Sun, 15 Oct 2023 00:00:00 +0800</lastBuildDate>
+        <category>Hexo</category>
+        <category>CS学习</category>
+        <category>洛谷</category>
+        <item>
+            <guid isPermalink="true">http://shiroitree.icu/cs-learning/luogu/luogu-beginner-simulate/</guid>
+            <title>洛谷-入门-模拟</title>
+            <link>http://shiroitree.icu/cs-learning/luogu/luogu-beginner-simulate/</link>
+            <category>CS学习</category>
+            <category>洛谷</category>
+            <pubDate>Sun, 15 Oct 2023 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;可以使用模拟解决的算法题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可以使用模拟解决的算法题&#34;&gt;#&lt;/a&gt; 可以使用模拟解决的算法题&lt;/h1&gt;
+&lt;p&gt;模拟，顾名思义，我们可以直接按照其题目描述的数值处理流程对所给数值处理后，输出答案。该方案在逻辑上极为直观的，在对数值进行处理的时候不需要推导状态转移方程，但是对于部分题目其时间复杂度过高，所以需要斟酌使用。&lt;/p&gt;
+&lt;h1 id=&#34;p5594-xr-4模拟赛&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#p5594-xr-4模拟赛&#34;&gt;#&lt;/a&gt; P5594 【XR-4】模拟赛&lt;/h1&gt;
+&lt;p&gt;该题使用模拟可以简单解决。&lt;/p&gt;
+&lt;p&gt;对输入数据建立二维数组 map [n] [k+1] 用于存放，第 i 位同学，在第 j 天所做的题号。&lt;br /&gt;
+犹豫我们只需要统计每天答不同题号的种类数，所以我们可仅对 j 天进行遍历。&lt;br /&gt;
+统计种类数时，判断是否出现过可使用一个一维数组 bool [m+1] 下表是题号，内容是布尔值。最后将统计值输出就行。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-C&#34;&gt;#include &amp;lt;stdio.h&amp;gt;
+
+int main()
+&amp;#123;
+    int n, m, k;
+    scanf(&amp;quot;%d %d %d&amp;quot;, &amp;amp;n, &amp;amp;m, &amp;amp;k);
+    int map[n][k + 1];
+    for (int i = 0; i &amp;lt; n; i++)
+    &amp;#123;
+        for (int j = 0; j &amp;lt;= k; j++)
+        &amp;#123;
+            map[i][j]=0;
+        &amp;#125;
+    &amp;#125;
+    for (int i = 0; i &amp;lt; n; i++)
+    &amp;#123;
+        for (int j = 1; j &amp;lt;= m; j++)
+        &amp;#123;
+            int a;
+            scanf(&amp;quot;%d&amp;quot;, &amp;amp;a);
+            map[i][a] = j;
+        &amp;#125;
+    &amp;#125;
+    for (int i = 1; i &amp;lt;= k; i++)
+    &amp;#123;
+        int boo[m+1],ans=0;
+        boo[0]=1;   
+        for (int j=1;j&amp;lt;=m;j++)
+        &amp;#123;
+            boo[j]=0;
+        &amp;#125;
+        for (int j=0;j&amp;lt;n;j++)
+        &amp;#123;
+            if (!boo[map[j][i]])
+            &amp;#123;
+                ans++;
+                boo[map[j][i]]=1;
+            &amp;#125;
+        &amp;#125;
+        printf(&amp;quot;%d &amp;quot;, ans);
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

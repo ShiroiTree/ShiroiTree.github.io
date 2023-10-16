@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Personal Blog • All posts by \"cs学习\" tag",
+    "description": "",
+    "home_page_url": "http://shiroitree.icu",
+    "items": [
+        {
+            "id": "http://shiroitree.icu/cs-learning/luogu/luogu-beginner-simulate/",
+            "url": "http://shiroitree.icu/cs-learning/luogu/luogu-beginner-simulate/",
+            "title": "洛谷-入门-模拟",
+            "date_published": "2023-10-14T16:00:00.000Z",
+            "content_html": "<h1 id=\"可以使用模拟解决的算法题\"><a class=\"anchor\" href=\"#可以使用模拟解决的算法题\">#</a> 可以使用模拟解决的算法题</h1>\n<p>模拟，顾名思义，我们可以直接按照其题目描述的数值处理流程对所给数值处理后，输出答案。该方案在逻辑上极为直观的，在对数值进行处理的时候不需要推导状态转移方程，但是对于部分题目其时间复杂度过高，所以需要斟酌使用。</p>\n<h1 id=\"p5594-xr-4模拟赛\"><a class=\"anchor\" href=\"#p5594-xr-4模拟赛\">#</a> P5594 【XR-4】模拟赛</h1>\n<p>该题使用模拟可以简单解决。</p>\n<p>对输入数据建立二维数组 map [n] [k+1] 用于存放，第 i 位同学，在第 j 天所做的题号。<br />\n犹豫我们只需要统计每天答不同题号的种类数，所以我们可仅对 j 天进行遍历。<br />\n统计种类数时，判断是否出现过可使用一个一维数组 bool [m+1] 下表是题号，内容是布尔值。最后将统计值输出就行。</p>\n<pre><code class=\"language-C\">#include &lt;stdio.h&gt;\n\nint main()\n&#123;\n    int n, m, k;\n    scanf(&quot;%d %d %d&quot;, &amp;n, &amp;m, &amp;k);\n    int map[n][k + 1];\n    for (int i = 0; i &lt; n; i++)\n    &#123;\n        for (int j = 0; j &lt;= k; j++)\n        &#123;\n            map[i][j]=0;\n        &#125;\n    &#125;\n    for (int i = 0; i &lt; n; i++)\n    &#123;\n        for (int j = 1; j &lt;= m; j++)\n        &#123;\n            int a;\n            scanf(&quot;%d&quot;, &amp;a);\n            map[i][a] = j;\n        &#125;\n    &#125;\n    for (int i = 1; i &lt;= k; i++)\n    &#123;\n        int boo[m+1],ans=0;\n        boo[0]=1;   \n        for (int j=1;j&lt;=m;j++)\n        &#123;\n            boo[j]=0;\n        &#125;\n        for (int j=0;j&lt;n;j++)\n        &#123;\n            if (!boo[map[j][i]])\n            &#123;\n                ans++;\n                boo[map[j][i]]=1;\n            &#125;\n        &#125;\n        printf(&quot;%d &quot;, ans);\n    &#125;\n&#125;\n</code></pre>\n",
+            "tags": [
+                "CS学习",
+                "洛谷"
+            ]
+        }
+    ]
+}
